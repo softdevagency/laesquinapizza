@@ -1,0 +1,81 @@
+.footer {
+    background-color: $accent-1;
+    padding: clamp(48px, 4.167vw, 160px) 0 clamp(18px, 1.25vw, 48px) 0;
+
+
+    .information-1 {
+        text-align: center;
+        border-right: 1px solid $accent-3;
+        padding-right: clamp(18px, 1.25vw, 48px);
+
+        @include media-query(760px) {
+            border-right: 0px;
+            padding-right: 0px;
+
+        }
+
+        p {
+            @include media-query(1199px) {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        a {
+            &:hover {
+                transition: $transition;
+                color: $accent-3;
+            }
+        }
+
+        .social-icon {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: $gap-16;
+
+            svg {
+                width: clamp(16px, 1.25vw, 48px);
+                height: clamp(16px, 1.25vw, 48px);
+                transition: $transition;
+
+                &:hover {
+                    path {
+                        transition: $transition;
+                        fill: $accent-3;
+                    }
+                }
+            }
+
+            a {
+                border-right: 1px solid $white;
+                padding-right: clamp(12px, 0.833vw, 32px);
+            }
+
+            .social-icon-end {
+                border-right: none;
+
+            }
+
+        }
+
+    }
+
+    .information-3 {
+        border-right: 0px;
+        padding-right: 0px;
+    }
+
+    .vr-line {
+        @include media-query(760px) {
+            margin-top: 6%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 1px;
+            width: 300px;
+            background: $white;
+        }
+    }
+
+}

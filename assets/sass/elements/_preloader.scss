@@ -1,0 +1,153 @@
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  background: $accent-3;
+
+
+
+  #topb {
+    animation: falldown7 3s infinite;
+    animation-delay: 0s;
+  }
+
+  #onion {
+    animation: falldown6 3s infinite;
+    animation-delay: 0s;
+  }
+
+  #tomato {
+    animation: falldown5 3s infinite;
+    animation-delay: 0s;
+  }
+
+  #letus {
+    animation: falldown4 3s infinite;
+    animation-delay: 0s;
+  }
+
+  #cheese {
+    animation: falldown3 3s infinite;
+    animation-delay: 0s;
+  }
+
+  #meat {
+    animation: falldown2 3s infinite;
+    animation-delay: 0s;
+  }
+
+  #bottomb {
+
+    animation: falldown1 3s infinite;
+    animation-delay: 0s;
+  }
+
+  h2 {
+    font-family: 'Poiret One', cursive;
+    font-size: 20pt;
+    color: #FF530D;
+
+  }
+
+  @keyframes falldown1 {
+    0% {
+      transform: translateY(-800px);
+    }
+
+    70% {
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes falldown2 {
+    0% {
+      transform: translateY(-1000px);
+    }
+
+    70% {
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes falldown3 {
+    0% {
+      transform: translateY(-1200px);
+    }
+
+    70% {
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes falldown4 {
+    0% {
+      transform: translateY(-1400px);
+    }
+
+    70% {
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes falldown5 {
+    0% {
+      transform: translateY(-1600px);
+    }
+
+    70% {
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes falldown6 {
+    0% {
+      transform: translateY(-1800px);
+    }
+
+    70% {
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes falldown7 {
+    0% {
+      transform: translateY(-2000px);
+    }
+
+    70% {
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

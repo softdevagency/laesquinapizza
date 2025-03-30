@@ -1,0 +1,51 @@
+.banner-1 {
+    background: url(../media/backgrounds/banner.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+
+    @include media-query(1260px) {
+        background-position: 80% 0;
+    }
+
+    @include media-query(768px) {
+        background-size: 300% 100%;
+        background-position: 65% 0;
+    }
+
+    h4 {
+        br {
+            @include media-query(699px) {
+                display: none;
+            }
+        }
+    }
+
+    p {
+        br {
+            @include media-query(699px) {
+                display: none;
+            }
+        }
+    }
+
+    .banner-elements {
+        display: flex;
+        align-items: center;
+        gap: $gap-32;
+        flex-wrap: wrap;
+
+        @include media-query(768px) {
+            display: grid;
+            h6{
+                font-size: clamp(12px, 0.938vw, 36px);
+            }
+        }
+    }
+
+    .banner-icon {
+        width: clamp(40px, 4.167vw, 160px);
+        height: clamp(40px, 4.167vw, 160px);
+    }
+}

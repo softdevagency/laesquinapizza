@@ -1,0 +1,51 @@
+.table-booking {
+    padding: clamp(18px, 1.25vw, 48px);
+    border-radius: $br-16;
+    border: 1px solid $dark-gray;
+    background-color: $white;
+
+    .get-in-touch-2 {
+        svg {
+            width: clamp(24px, 2.083vw, 54px);
+            height: clamp(24px, 2.083vw, 54px);
+
+            @include media-query(575px) {
+                width: clamp(40px, 2.5vw, 54px);
+                height: clamp(40px, 2.5vw, 54px);
+            }
+        }
+    }
+
+    .get-in-touch {
+        svg {
+            width: clamp(24px, 2.083vw, 54px);
+            height: clamp(24px, 2.083vw, 54px);
+        }
+    }
+}
+
+.map {
+    .map-wrapper {
+        iframe {
+            border-radius: $br-12;
+            width: 100%;
+            height: clamp(450px, 31.25vw, 900px);
+        }
+    }
+}
+
+.wrapper-dropdown {
+    .contact-arrow {
+        top: 0% !important;
+        right: 0% !important;
+    }
+}
+
+.map {
+    .map-wrapper {
+        iframe {
+            height: clamp(380px, 22.396vw, 500px); /* 430px*/
+        }
+    }
+
+}

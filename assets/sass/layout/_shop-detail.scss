@@ -1,0 +1,251 @@
+.shop-detail {
+    .burger-bg {
+        padding: clamp(12px, 1.042vw, 40px);
+        border-radius: $br-32;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $accent-1;
+    }
+
+
+    .cbx {
+        display: flex;
+        align-items: center;
+    }
+
+    .check-mail-box {
+        @include media-query(1660px) {
+            font-size: clamp(13px, 0.938vw, 36px);
+        }
+
+        @include media-query(1460px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .quantity-box {
+        background-color: $white;
+        width: fit-content;
+        border: 1px solid $dark-gray;
+        border-radius: $br-12;
+        display: flex;
+        align-items: center;
+        gap: $gap-24;
+        padding: clamp(8px, 0.625vw, 24px);
+
+        @include media-query(768px) {
+            gap: $gap-4 !important;
+        }
+    }
+
+    .quantity {
+        display: inline-flex;
+        align-items: flex-start;
+        border-radius: $br-32;
+        padding: 8px;
+        background: $lightest-gray;
+
+        .input-area {
+            display: flex;
+            gap: $gap-8;
+
+            input {
+                display: grid;
+                align-content: center;
+                border: none;
+                border-radius: 0px;
+                text-align: center;
+                font-weight: 500;
+                font-size: 21px;
+                background-color: transparent;
+                color: $black;
+                padding: 0 8px;
+                width: 28px;
+                height: 28px;
+
+                &:focus-visible {
+                    outline: none;
+                }
+
+                &.decrement {
+                    font-size: 27px;
+                    font-weight: 200;
+                    border-radius: $br-32;
+                    background: $accent-1;
+                    color: $white;
+                    padding: 4px 9px;
+                }
+
+                &.increment {
+                    font-size: 27px;
+                    font-weight: 200;
+                    border-radius: $br-32;
+                    background: $accent-1;
+                    color: $white;
+                    border: 0;
+                    padding: 3px 0 0 0;
+                }
+
+                &.number {
+                    padding: 0;
+                    background: transparent;
+                    font-size: 21px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 130%;
+                }
+            }
+        }
+
+
+    }
+
+    .discription {
+        color: $medium-black;
+        padding: clamp(8px, 0.625vw, 24px) clamp(24px, 1.667vw, 64px);
+        // background-color: $accent-1;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        border-radius: $br-4;
+        border: 1px solid $dark-gray;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .reviews {
+        color: $medium-black;
+        padding: clamp(8px, 0.625vw, 24px) clamp(24px, 1.667vw, 64px);
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        border: 1px solid $dark-gray;
+        border-left: none;
+        border-radius: $br-4;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .nav-link {
+        &.active {
+            border: 1px solid $accent-1;
+            color: $white;
+            background-color: $accent-1;
+        }
+
+        &:hover {
+            border: 1px solid $medium-black;
+        }
+
+    }
+
+    .discription-2 {
+        border: 1px solid $dark-gray;
+        border-right: none;
+        background-color: $accent-1;
+    }
+
+    .reviews-2 {
+        background-color: $accent-1;
+    }
+
+    .review-user {
+        width: clamp(48px, 5.208vw, 120px);
+        height: clamp(48px, 5.208vw, 120px);
+        border-radius: 50%;
+    }
+
+    .review-comment {
+        background-color: $white;
+        padding: clamp(18px, 1.25vw, 48px);
+        border: 1px solid $dark-gray;
+        border-radius: $br-12;
+    }
+
+    .add-review {
+        background-color: $white;
+        padding: clamp(18px, 1.25vw, 48px);
+        border: 1px solid $dark-gray;
+        border-radius: $br-12;
+
+    }
+
+    .rating {
+        svg {
+            @include media-query(768px) {
+                width: 18px;
+            }
+        }
+    }
+
+    .rating:not(:checked)>input {
+        position: absolute;
+        appearance: none;
+    }
+
+    .rating:not(:checked)>label {
+        float: right;
+        cursor: pointer;
+        font-size: 25px;
+        fill: $accent-1;
+    }
+
+    .rating:not(:checked)>label>svg {
+        fill: $accent-1
+    }
+
+    .rating>input:checked+label:hover,
+    .rating>input:checked+label:hover~label,
+    .rating>input:checked~label:hover,
+    .rating>input:checked~label:hover~label,
+    .rating>label:hover~input:checked~label {
+        fill: $accent-1;
+    }
+
+    .rating:not(:checked)>label:hover,
+    .rating:not(:checked)>label:hover~label {
+        fill: $accent-1;
+    }
+
+    .rating>input:checked~label>svg {
+        fill: $accent-3;
+    }
+
+
+    .form-control-2 {
+        padding: clamp(16px, 1.042vw, 40px) clamp(18px, 1.25vw, 48px);
+        height: 180px;
+
+        @include media-query(768px) {
+            height: 280px;
+
+        }
+    }
+
+    .submit-btn {
+        border: none;
+    }
+
+
+    .checkbox-wrapper-46 .cbx span:first-child {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border-radius: 3px;
+        transform: scale(1);
+        vertical-align: middle;
+        border: 1px solid #9098a9;
+        transition: all 0.2s ease;
+
+        @include media-query(768px) {
+            width: 32px;
+            height: 18px;
+
+        }
+    }
+
+}

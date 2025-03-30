@@ -1,0 +1,190 @@
+.shop-list {
+    .search-bar {
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: $br-16;
+        border-right: none;
+        border: 1px solid;
+
+        .search-form {
+            display: flex;
+
+            .input-search {
+                padding: clamp(11px, 0.833vw, 32px) 0 clamp(8px, 0.833vw, 32px) clamp(16px, 1.667vw, 64px);
+                color: $medium-black;
+                border: none;
+                background: transparent;
+
+                @include media-query(576px) {
+                    height: 30px;
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+
+
+        .search-button {
+            .input-button {
+                background: $accent-1;
+                padding: clamp(12px, 0.833vw, 32px) clamp(24px, 1.667vw, 64px) clamp(12px, 0.833vw, 32px);
+                border-radius: $br-14;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                background: $accent-1;
+                border: 1px solid $accent-1;
+
+                @include media-query(1280px) {
+                    margin-left: -18px;
+                }
+            }
+        }
+
+    }
+
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+    }
+
+    .side-bar-part-1 {
+        border-radius: $br-16;
+        border: 1px solid $dark-gray;
+        padding: clamp(18px, 1.25vw, 48px);
+        background-color: $white;
+        
+    }
+    
+
+    .latest-article {
+        .hover-link {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            transition: $transition;
+
+            @include media-query(992px) {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        &:hover {
+            .hover-link {
+                transition: $transition;
+                color: $accent-1 !important;
+            }
+        }
+
+    }
+}
+
+.checkbox-wrapper-46 input[type="checkbox"] {
+    width: clamp(16px, 1.042vw, 40px);
+    height: clamp(16px, 1.042vw, 40px);
+    display: none;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checkbox-wrapper-46 .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098a9;
+    transition: all 0.2s ease;
+
+    @include media-query(768px) {
+        width: 16px;
+        height: 15px;
+
+    }
+}
+.checkbox-wrapper-46 .cbx-2 span:first-child{
+    @include media-query(611px) {
+        width: 19px;
+        height: 15px;
+
+    }
+
+}
+
+.checkbox-wrapper-46 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:last-child {
+    padding-left: 8px;
+}
+
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+    border-color: $accent-1;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child {
+    background: $accent-1;
+    border-color: $accent-1;
+    animation: wave-46 0.4s ease;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+@keyframes wave-46 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+
+
+.category-content{
+    transition: $transition;
+    &:hover{
+        color: $accent-1;
+        transition: $transition;
+    }
+}

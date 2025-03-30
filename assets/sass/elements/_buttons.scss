@@ -1,0 +1,275 @@
+/*----------------------------------------*/
+/*  Button CSS START
+/*----------------------------------------*/
+
+
+
+
+/* From Uiverse.io by cssbuttons-io */
+.cus-btn {
+  line-height: 120%;
+  border-radius: $br-12;
+  background-color: $accent-3;
+  color: $white;
+  font-family: $font-sec;
+  // height: clamp(40px, 2.5vw, 54px);
+  padding: clamp(12px, 0.677vw , 18px) clamp(24px, 1.667vw, 64px);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size:  clamp(14px, 0.938vw, 36px);
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-flex;
+}
+
+.cus-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: $accent-1;
+  height: 25rem;
+  width: 50rem;
+  border-radius: 50%;
+  transition: $transition;
+}
+
+.cus-btn:hover {
+  background-color: $accent-3;
+  color: $white;
+}
+
+.cus-btn:before {
+  top: 60%;
+  left: 50%;
+  transition: $transition;
+}
+
+.cus-btn:hover:before {
+  top: -80px;
+  left: -310px;
+}
+
+.cus-btn:active:before {
+  background: $accent-1;
+  transition:$transition;
+}
+
+
+
+
+/*----------------------------------------*/
+/* scroll to top
+/*----------------------------------------*/
+.scrollToTopBtn {
+	background-color: $accent-2;
+	border: none;
+	border-radius: $br-8;
+	color: $white;
+	cursor: pointer;
+	font-size: clamp(18px, 1.25vw, 48px);
+	line-height: 48px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+	width: clamp(40px, 2.5vw, 64px);
+	height: clamp(40px, 2.5vw, 64px);
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 100;
+	opacity: 0;
+	transform: translateY(100px);
+	transition: all .5s ease;
+  &:hover{
+    background: $accent-1;
+    color: $white;
+    transition: $transition;
+  }
+}
+.showBtn {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+
+
+// SLIDER ARROWS
+.slider-arrows {
+  display: flex;
+  align-items: center;
+  gap: $gap-16;
+
+  .arrow-btn {
+    width: clamp(32px, 2.5vw, 64px);
+    height: clamp(32px, 2.5vw, 64px);
+    border-radius: $br-4;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: $light-white;
+    transition: $transition;
+    border: 1px solid $lightest-gray;
+
+    svg {
+
+      width: clamp(24px, 1.667vw, 64px);
+      height: clamp(25px, 1.719vw, 64px);
+      transition: $transition;
+
+      path {
+        stroke: $white;
+        transition: $transition;
+      }
+    }
+
+    &:hover {
+      transition: $transition;
+      background-color: $accent-1;
+
+      path {
+
+        padding: $gap-16;
+        stroke: $white;
+        transition: $transition;
+      }
+    }
+  }
+}
+
+// SOCIAL ICONS
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 0.625vw, 20px);
+
+  @include media-query(490px) {
+    gap: $gap-16;
+  }
+
+  &.icon-v2 {
+    gap: $gap-20;
+  }
+
+  li {
+    a {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      border-radius: $br-4;
+      transition: $transition;
+
+      svg {
+        width: clamp(18px, 1.25vw, 48px);
+        height: clamp(18px, 1.25vw, 48px);
+
+        path {
+          transition: $transition;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: $medium-black;
+            transition: $transition;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===================  PAGINATIONS =================== // 
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+
+  #border-pagination {
+    display: flex;
+    gap: $gap-8;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline;
+
+      span {
+        color: $white;
+        transition: $transition;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $white;
+        width: clamp(36px, 2.083vw, 64px);
+        height: clamp(36px, 2.083vw, 64px);
+        border-radius: 8px;
+        background: $accent-3;
+        float: left;
+        transition: $transition;
+        font-family: $font-primary;
+        font-size: clamp(16px, 0.938vw, 22px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+
+        /* 21.6px */
+        @include media-query(399px) {
+          font-size: clamp(12px, 0.729vw, 28px);
+        }
+
+        svg {
+          path {
+            stroke: $white;
+            transition: $transition;
+          }
+        }
+
+        &.active {
+          background-color: $accent-1;
+          color: $white;
+
+          svg {
+            path {
+              stroke: $white;
+              transition: $transition;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $accent-1;
+          color: $white;
+          border: 1px solid $accent-1;
+
+          svg {
+            path {
+              stroke: $white;
+              transition: $transition;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        span {
+          color: $white;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}
