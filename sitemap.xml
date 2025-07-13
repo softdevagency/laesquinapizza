@@ -1,0 +1,45 @@
+      <?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.laesquinapizza.com/index.html</loc>
+    <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.laesquinapizza.com/nosotros.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.laesquinapizza.com/contactanos.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.laesquinapizza.com/preguntas.html</loc>
+    <priority>0.60</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.laesquinapizza.com/terminos.html</loc>
+    <priority>0.50</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.laesquinapizza.com/testimonios.html</loc>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>
